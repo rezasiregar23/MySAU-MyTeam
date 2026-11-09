@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id" class="mt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>My Team — MySAU</title>
+  <meta name="description" content="My Team: dashboard tim untuk pemimpin di SAU." />
+  <meta name="theme-color" content="#EAF2F8" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/motion.css" />
+  <link rel="stylesheet" href="css/inoffice.css" />
+  <link rel="stylesheet" href="css/mobile.css" />
+  <link rel="stylesheet" href="css/team.css" />
+  <link rel="stylesheet" href="css/myteam.css" />
+  <script src="js/fit.js"></script>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true">
+    <img class="light bg-l1" src="assets/stage/light-1.svg" alt="" />
+    <img class="light bg-l2" src="assets/stage/light-2.svg" alt="" />
+    <img class="light bg-l3" src="assets/stage/light-3.svg" alt="" />
+    <img class="light bg-l4" src="assets/stage/light-4.svg" alt="" />
+    <img class="light bg-l5" src="assets/stage/light-5.svg" alt="" />
+  </div>
+
+  <div class="frame" id="frame">
+    <nav class="mt-side glass" aria-label="Menu My Team">
+      <a class="mt-logo" href="#/anggota" aria-label="My Team, beranda aplikasi"><span data-icon="users" data-size="22" data-sw="2"></span></a>
+      <div class="mt-navlist" id="mtNav"></div>
+      <a class="mt-nav mt-exit" href="index.html#/team" aria-label="Kembali ke MySAU"><span data-icon="logout" data-size="20"></span><span>Kembali ke MySAU</span></a>
+    </nav>
+
+    <header class="topbar mt-top">
+      <nav class="mt-crumb" id="mtCrumb" aria-label="Lokasi"></nav>
+      <div class="search mt-search">
+        <span class="search-ic" data-icon="search"></span>
+        <input id="mtSearch" type="search" placeholder="Cari anggota tim…" autocomplete="off" aria-label="Cari anggota tim" />
+        <kbd>⌘K</kbd>
+        <div class="popover search-results" id="mtResults" hidden></div>
+      </div>
+      <div class="top-actions">
+        <a class="btn ghost mt-back" href="index.html#/team"><span data-icon="chevL" data-size="15" data-sw="2.2"></span><span>MySAU</span></a>
+        <div class="profile glass" id="mtProfile"></div>
+      </div>
+    </header>
+
+    <main id="app" class="page-outlet mt-outlet" tabindex="-1"></main>
+
+    <div class="toast-wrap" id="toasts" aria-live="polite"></div>
+    <div class="modal-root" id="modalRoot"></div>
+  </div>
+
+  <noscript><p class="noscript">My Team membutuhkan JavaScript untuk berjalan.</p></noscript>
+  <script src="js/myteam.bundle.js"></script>
+</body>
+</html>

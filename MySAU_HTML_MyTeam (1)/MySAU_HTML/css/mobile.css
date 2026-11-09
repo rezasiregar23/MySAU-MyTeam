@@ -1,0 +1,24 @@
+/* Saut breathes everywhere; only the ring moves, never its label. */
+@keyframes saut-breathe{0%,100%{transform:scale(.9);filter:brightness(1);box-shadow:0 0 0 3px #65c8f018,0 0 10px #6cbfeb35}50%{transform:scale(1.12);filter:brightness(1.15);box-shadow:0 0 0 6px #65c8f025,0 0 22px #6cbfeb65}}
+@keyframes saut-think{0%{transform:rotate(0) scale(.92)}50%{transform:rotate(180deg) scale(1.12)}100%{transform:rotate(360deg) scale(.92)}}
+.ai-ring{animation:saut-breathe 3.6s ease-in-out infinite;transform-origin:center;will-change:transform}
+.is-busy .ai-ring{animation:saut-think 1.6s linear infinite}
+.ai-launch:hover .ai-ring,.ai-home-bubble:hover .ai-ring{filter:brightness(1.25)}
+.kb-move{display:flex;justify-content:flex-end;gap:5px;width:100%;margin-top:3px}.kb-move button{width:23px;height:23px;border-radius:7px;background:#e4eff87a;color:#5882aa;font-size:14px}.kb-move button:hover{background:#d2e5f6}
+.kb-list,.at-list{overflow-y:auto!important;min-height:0;scrollbar-width:thin;-webkit-overflow-scrolling:touch}.kb-list{max-height:100%!important}.kb-card{flex:0 0 auto}.kb-board{height:100%;min-height:0}.kb-column{min-height:0}.kb-hint{flex:none}
+@media(max-width:767px){
+ html,body{overflow-x:hidden}html:not(.fit) body{overflow-y:auto}html:not(.fit) .page-outlet{padding:83px 16px 175px}html:not(.fit) .page{display:flex;flex-direction:column;gap:18px;height:auto;min-width:0}
+ .topbar{position:fixed;z-index:50}.brand{font-size:23px}.top-actions{gap:7px}.profile{padding:5px}.profile>.ic{display:none}.top-actions .icon-btn{width:37px;height:37px}.profile .avatar{width:32px;height:32px}
+ .tabbar{bottom:calc(12px + env(safe-area-inset-bottom));gap:5px;max-width:calc(100vw - 24px)}.tabbar .tab{width:47px;height:45px}.ai-launch{bottom:calc(83px + env(safe-area-inset-bottom));right:16px}
+ .card{border-radius:23px}.page-title h1{font-size:24px}.page-title p{font-size:12px}.greet h1{font-size:24px}.date-pill{font-size:11px}
+ html:not(.fit) .stage-col{order:-1}.stage-col .greet{padding-top:3px}.ai-home-bubble{font-size:15px;padding:0 15px;left:30px}.ai-home-bubble .ai-ring{width:28px;height:28px}
+ html:not(.fit) .page-task>.col-left{order:0;overflow:visible}
+ html:not(.fit) .page-task>.kanban-center{order:1;height:540px;flex:none;padding:0;gap:12px;overflow:hidden}.kb-head{gap:10px}.kb-head h2{font-size:18px}.kb-controls select{height:38px;font-size:11px}.kb-add{height:38px;font-size:11px}
+ .kb-board{display:flex;overflow-x:auto;scroll-snap-type:x proximity;gap:12px;flex:1;min-height:0;height:auto;padding-bottom:8px;touch-action:pan-x pan-y}.kb-column{width:76vw;max-width:300px;flex:0 0 auto;scroll-snap-align:start;padding:12px;border-radius:20px}.kb-column>header{height:30px}.kb-column>header b{font-size:12px}.kb-column>header span{font-size:11px}.kb-list{touch-action:pan-x pan-y;gap:10px;overscroll-behavior-y:contain}.kb-card{padding:13px;border-radius:15px;gap:7px}.kb-title{font-size:13px}.kb-app{font-size:11px}.kb-due{font-size:10px}.kb-move button{width:34px;height:30px;font-size:18px}.kb-hint{display:block;font-size:10px;line-height:1.5;text-align:left}
+ html:not(.fit) .page-task>.col-right{order:2;padding-bottom:0;overflow:visible}.page-task .all-tasks{max-height:none!important;height:370px!important;flex:none!important}.page-task .at-row .tr-title{font-size:13px}.page-task .activity{max-height:280px}.page-task .activity p{font-size:12px}
+ html:not(.fit) .page-kalender .col-left{display:flex;flex-direction:column}.cal-toolbar{flex-wrap:wrap;gap:8px}.month{overflow:auto}.m-cell{min-width:0}.mchip{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.cal-main{min-width:0}.week,.day{overflow:auto}
+ .io-grid{display:flex;flex-direction:column}.io-col{width:100%}.io-center{order:-1;padding-top:0;margin-bottom:10px}.io-find h2{font-size:16px}.io-quick-grid button{font-size:11px}.io-search{margin:20px 0 15px}.io-search input{font-size:12px}.page-inoffice{padding-bottom:0}.io-results{position:relative;top:auto;margin-top:15px}.io-modal{max-height:calc(100dvh - 35px)}
+ .ai-panel{max-height:calc(100dvh - 24px);width:calc(100vw - 24px)}.ai-panel.has-messages{height:min(650px,calc(100dvh - 24px))}.ai-welcome h3{font-size:20px;line-height:1.5}.ai-composer textarea,.drawer-search input{font-size:16px}.ai-prompts button{min-height:36px}.ai-panel header{flex:none}.ai-messages{min-height:0}.ai-foot{line-height:1.5}.ai-composer,.ai-prompts,.ai-foot{flex-shrink:0}
+ .app-drawer{max-height:calc(100dvh - 24px)}.drawer-body{overflow-y:auto}.drawer-grid{gap:8px}.drawer-app{min-height:105px}.drawer-app b{font-size:12px}.drawer-app small{font-size:10px}.drawer-filters button{min-height:32px}.app-drawer header,.drawer-search,.drawer-filters,.app-drawer footer{flex-shrink:0}
+}
+@media(prefers-reduced-motion:reduce){.ai-ring,.is-busy .ai-ring{animation:none;will-change:auto}}
